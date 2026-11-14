@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row g-4">
+    <aside class="col-lg-4">
+        <div class="card custom-card text-center p-4">
+            <div class="mb-3">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Лого" class="profile-img img-fluid">
+            </div>
+            <h1 class="h3 fw-bold mb-1">Марк Ткачук</h1>
+            <p class="text-muted mb-3">Студент ІТ-спеціальності, ІПЗ | </p>
+            <p class="small text-secondary mb-3">Івано-Франківськ, Україна</p>
+            <a href="{{ url_for('contacts') }}" class="btn btn-primary w-100">Зв'язатися зі мною</a>
+        </div>
+    </aside>
+    <div class="col-lg-8">
+        <section id="about" class="resume-section card custom-card p-4 mb-4">
+            <h2 class="section-title h4">Про себе</h2>
+            <p class="mb-0">
+               Студент 3-го курсу КНУ спеціальності ІПЗ. Системний адміністратор магазину МТА, та випускник академії IT-Step в напрямку Web/UI/UX Design.
+        </section>
+
+        <section id="education" class="resume-section card custom-card p-4 mb-4">
+            <h2 class="section-title h4">Освіта</h2>
+            <article>
+                <h3 class="h5 fw-semibold mb-1">IT-Step Academy Web\UI\UX Design</h3>
+                <p class="text-muted small mb-2">2022 — 2026</p>
+                <h3 class="h5 fw-semibold mb-1">Прикарпатський національний університет імені Василя Стефаника</h3>
+                <p class="text-muted small mb-2">2023 — теперішній час | Бакалавр (3 курс)</p>
+
+            </article>
+        </section>
+
+        <section id="skills" class="resume-section card custom-card p-4 mb-4">
+            <h2 class="section-title h4">Навички</h2>
+            <ul class="mb-0">
+                <li>Об'єктно-орієнтоване програмування та проєктування архітектури додатків.</li>
+                <li>Налаштування та симуляція комп'ютерних мереж (IPv4-підмережі, VLAN, SSH, маршрутизація).</li>
+                <li>Робота із зовнішніми API, обробка даних та математичне моделювання.</li>
+                <li>Проєктування призначеннєвих інтерфейсів та адаптивна верстка.</li>
+                <li>Створення логотипів, банерів та інших рекламаційних матераілів</li>
+                
+            </ul>
+        </section>
+
+        <section id="technologies" class="resume-section card custom-card p-4 mb-4">
+            <h2 class="section-title h4">Технології</h2>
+            <div class="d-flex flex-wrap gap-2">
+                <span class="badge custom-badge">Python 3</span>
+                <span class="badge custom-badge">Flask</span>
+                <span class="badge custom-badge">Jinja2</span>
+                <span class="badge custom-badge">Java 17</span>
+                <span class="badge custom-badge">JavaFX</span>
+                <span class="badge custom-badge">PHP</span>
+                <span class="badge custom-badge">HTML5 & CSS3</span>
+                <span class="badge custom-badge">Bootstrap 5</span>
+                <span class="badge custom-badge">SciPy / NumPy</span>
+                <span class="badge custom-badge">Git & GitHub</span>
+                <span class="badge custom-badge">Cisco Packet Tracer</span>
+                <span class="badge custom-badge">Figma</span>
+            </div>
+        </section>
+
+        <section id="projects" class="resume-section card custom-card p-4 mb-4">
+            <h2 class="section-title h4">Досвід роботи (Проекти)</h2>
+            <article class="mb-3 pb-3 border-bottom">
+                <h3 class="h5 fw-semibold mb-1">Десктопний музичний каталог (Java 17, JavaFX, Maven, Last.fm API)</h3>
+                <p class="mb-0">
+                    Розробка десктопного додатку з графічним інтерфейсом JavaFX для пошуку виконавців та інтеграції з Last.fm API із нормалізацією показників популярності треків.
+                </p>
+            </article>
+            <article class="mb-3 pb-3 border-bottom">
+                <h3 class="h5 fw-semibold mb-1">Моделювання силового замикання 2D-тіл (Python, SciPy)</h3>
+                <p class="mb-0">
+                    Скрипт лінійного програмування на базі <code>scipy.optimize.linprog</code> для оцінки стабільності захоплення плоских твердих тіл у задачах робототехнічної маніпуляції.
+                </p>
+            </article>
+            <article>
+                <h3 class="h5 fw-semibold mb-1">Веб-додатки на Flask та PHP</h3>
+                <p class="mb-0">
+                    Створення динамічних веб-сторінок з обробкою форм, семантичною розміткою, шаблонами Jinja2 та розгортанням на хмарному хостингу Render.
+                </p>
+            </article>
+        </section>
+    </div>
+</div>
+{% endblock %}
