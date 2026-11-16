@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="card custom-card p-4">
+    <h1 class="section-title h3 mb-4">Каталог товарів</h1>
+    <div class="row g-4">
+        {% for item in products %}
+        <div class="col-md-4">
+            <div class="card h-100 border shadow-sm p-3">
+                <h2 class="h5 fw-bold">{{ item.name }}</h2>
+                <p class="text-primary fw-semibold mb-2">Ціна: ${{ item.price }}</p>
+                <p class="text-muted small flex-grow-1">{{ item.content }}</p>
+                <a href="{{ url_for('products.detail_product', product_id=item.id) }}" class="btn btn-outline-primary btn-sm mt-2">
+                    Детальніше
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
